@@ -27,6 +27,18 @@ public class Mechanics extends JFrame implements KeyListener, ActionListener {
 
     }
 
+    public void paint(Graphics g) {
+        //Background
+        g.setColor(Color.black);
+        g.fillRect(1,1,692,592);
+
+        //Borders
+        g.setColor(Color.yellow);
+        g.fillRect(0,0,3,592);
+        g.fillRect(0,0,692,3);
+        g.fillRect(691,0,3,592);
+
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
