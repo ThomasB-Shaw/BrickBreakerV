@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 
-public class Mechanics extends JFrame implements KeyListener, ActionListener {
+public class Mechanics extends JPanel implements KeyListener, ActionListener {
     private boolean play = false;
     private int score = 0;
     private int totalBricks = 21;
@@ -61,14 +61,14 @@ public class Mechanics extends JFrame implements KeyListener, ActionListener {
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode() == KeyEvent.VK_RIGHT){
             if(playerX >= 600){
-                playerX = 600
+                playerX = 600;
             } else {
                 moveRight();
             }
         }
         if(e.getKeyCode() == KeyEvent.VK_LEFT){
             if(playerX >= 10){
-                playerX = 10
+                playerX = 10;
             } else {
                 moveLeft();
             }
