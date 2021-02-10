@@ -38,6 +38,13 @@ public class Mechanics extends JFrame implements KeyListener, ActionListener {
         g.fillRect(0,0,692,3);
         g.fillRect(691,0,3,592);
 
+        //Bar
+        g.setColor(Color.green);
+        g.fillRect(playerX, 550, 100, 8);
+
+        //Ball
+        g.setColor(Color.yellow);
+        g.fillRect(ballposx, ballposy, 20, 20);
     }
 
     @Override
@@ -52,7 +59,16 @@ public class Mechanics extends JFrame implements KeyListener, ActionListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
+        if(e.getKeyCode() == KeyEvent.VK_RIGHT){
+            if(playerX >= 600){
+                playerX = 600
+            } else {
+                moveRight();
+            }
+        }
+        if(e.getKeyCode() == KeyEvent.VK_LEFT){
 
+        }
     }
 
     @Override
